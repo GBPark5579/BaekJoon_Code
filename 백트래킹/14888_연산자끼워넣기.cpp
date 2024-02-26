@@ -18,6 +18,7 @@ void getanswer(int result, int idx)
             mymin = result;
         return;
     }
+
     for(int i = 0; i < 4; i++)
     {
         if(operators[i] > 0)
@@ -41,9 +42,12 @@ int main()
     cin >> n;
     for(int i = 0; i < n; i++)
         cin >> operands[i];
+
     for(int i = 0; i < 4; i++)
         cin >> operators[i];
+
     getanswer(operands[0],1);
+    
     cout << mymax << '\n';
     cout << mymin;
 }
